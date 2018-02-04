@@ -1,0 +1,15 @@
+body {
+  padding: 5%;
+}
+
+.content {
+  background: #efefef;
+  padding: 20px;
+  margin-top: 25px;
+  line-height: 1.8;
+}
+
+.searchbar{
+  margin-bottom: 5px;
+  position: static;
+}

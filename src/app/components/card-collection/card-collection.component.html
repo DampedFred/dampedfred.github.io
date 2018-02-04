@@ -1,0 +1,8 @@
+<section class="card-collection">
+  <div class="cards row">
+    <section *ngFor="let load of loads">
+      <div class="pagebreak"></div>
+      <card class="col s12 l6" [load]="load"></card>
+    </section>
+  </div>
+</section>

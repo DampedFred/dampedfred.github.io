@@ -1,0 +1,33 @@
+#picture {
+  height: 400px;
+  width: 500px;
+}
+
+.font-size-description{
+}
+
+.card-title {
+  background-color: darkgrey;
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.resize {
+  width: 529px;
+}
+
+.space {
+  margin-left: 50px;
+}
+
+.columns {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  column-count: 2;
+  column-span: all;
+}

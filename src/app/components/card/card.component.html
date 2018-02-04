@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-image">
+    <img id="picture" src="{{load.pictureLocation}}" onerror="this.src='assets/no_picture.png'">
+    <span class="card-title">{{load.batch}}</span>
+  </div>
+  <div class="card-content">
+    <div class="columns resize">
+      <div>
+        <p><b>Artikel Code </b>{{load.articleCode}}</p>
+        <p><b>Vestiging </b>{{load.department}}</p>
+        <p><b>Beschrijving </b> <span [style.font-size] = "getFontSizeForDescription(load.description)">{{load.description}}</span></p>
+        <p><b>Vrij </b>{{load.free}}</p>
+      </div>
+      <div class="space">
+        <p><b>Prijs Per Duizend </b>{{load.price}}</p>
+        <p><b>Stuks per pallet </b>{{load.piecesPerRack}}</p>
+        <p><b>Tonnage </b>{{load.weight}}</p>
+        <p><b>Vrij m² </b>{{load.freeInCubicMeters}}</p>
+      </div>
+    </div>
+  </div>
+</div>

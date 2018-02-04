@@ -1,0 +1,14 @@
+<!--Here comes the nav bar-->
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Loten</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><input type="file" (change)="loadService.importFile($event)"></li>
+        <li *ngIf="loadService.getLoads().length > 0"><input type="file" (change)="loadService.importPictures(loadService.getLoads(),$event)" multiple></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>

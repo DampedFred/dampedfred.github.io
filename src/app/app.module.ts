@@ -11,8 +11,8 @@ import { CardComponent } from './components/card/card.component';
 import {FileSelectDirective} from "ng2-file-upload";
 import { CardCollectionComponent } from './components/card-collection/card-collection.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
-import {} from 'jasmine';
-import {} from '@types/papaparse';
+import {PapaParseModule} from 'ngx-papaparse'
+//bij cannot find name gewoon pakket verwijderen. In het begin na verwijderen van node modules altijd npm install angular2-materialize doen
 
 @NgModule({
   declarations: [
@@ -21,13 +21,14 @@ import {} from '@types/papaparse';
     CardComponent,
     FileSelectDirective,
     CardCollectionComponent,
-    SearchbarComponent
+    SearchbarComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MaterializeModule,
+    PapaParseModule,
     RouterModule.forRoot([
       {path: 'home', component: MainComponent},
     ]),

@@ -2,6 +2,7 @@ import {Load} from "../model/Load";
 import {deserialize} from "serializer.ts/Serializer";
 import {Observable, Subject} from "rxjs";
 import {Injectable} from "@angular/core";
+import { PapaParseService } from 'ngx-papaparse';
 
 /**
  * Created by Frederic on 27-6-2017.
@@ -9,12 +10,14 @@ import {Injectable} from "@angular/core";
 
 @Injectable()
 export class LoadService {
+  papa: any;
   listOfLoads: Load[] = [];
   loadsChanged: Subject<Load[]> = new Subject<Load[]>();
   pictureFiles: File[] = [];
   image: any;
 
-  constructor() {
+  constructor(private papaConstructor: PapaParseService) {
+    this.papa = papaConstructor;
   }
 
   getLoads(): Load[] {
@@ -53,7 +56,7 @@ export class LoadService {
 
     Observable.create(
       observable => {
-        Papa.parse(file, {
+        this.papa.parse(file, {
           beforeFirstChunk: function (chunk) {
             let rows = chunk.split(/\r\n|\r|\n/);
             let headings = rows[0].split(",");
@@ -78,6 +81,7 @@ export class LoadService {
             observable.complete();
           }
           ,
+          encoding: "UTF-8",
           header: true,
           skipEmptyLines: true,
           delimiter: ";"

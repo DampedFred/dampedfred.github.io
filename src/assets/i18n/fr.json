@@ -1,3 +1,11 @@
 {
-
+  "SPECIAL_OFFERS": "Lots",
+  "ARTICLE_CODE": "Code d'article",
+  "PLANT": "Usine",
+  "DESCRIPTION": "Description",
+  "STOCK": "Stock",
+  "PRICE/THOUSAND": "Prix/Mille",
+  "PIECES/PALLET": "Prix/Palette",
+  "TONNAGE": "Tonnage",
+  "STOCK_SQUARE_METRES": "Stock (m²)"
 }

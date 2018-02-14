@@ -32,7 +32,7 @@ import {TranslateModule, TranslateLoader, TranslateStaticLoader} from 'ng2-trans
     PapaParseModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
-      useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
+      useFactory: (http: Http) => new TranslateStaticLoader(http, '../assets/i18n', '.json'),
       deps: [Http]
     }),
     RouterModule.forRoot([

@@ -18,6 +18,7 @@ export class AppComponent {
 
   changeLang(lang: string) {
     this.translate.use(lang);
+    console.log("language changed to " + lang)
   }
 }
 

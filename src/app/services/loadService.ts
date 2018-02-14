@@ -70,10 +70,7 @@ export class LoadService {
             seperateHeadings[14] = "piecesPerRack";
             seperateHeadings[15] = "weight";
             headings[0] = seperateHeadings.join(";");
-            //console.log(seperateHeadings);
-            //console.log(headings);
             rows[0] = headings.join(";");
-            //console.log(rows.join("\r\n"));
             return rows.join("\r\n")
           },
           complete: function (results) {

@@ -1,14 +1,20 @@
-<!--Here comes the nav bar-->
-<div class="navbar-fixed">
+<ul id="dropdown1" class="dropdown-content">
+  <li><a (click)="changeLang('nl')">NL</a></li>
+  <li><a (click)="changeLang('en')">EN</a></li>
+  <li><a (click)="changeLang('fr')">FR</a></li>
+</ul>
+<div class="navbar-fixed hidden-print">
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Loten</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <a href="#" class="brand-logo">{{"Loads" || translate}}</a>
+      <ul id="nav-mobile" class="right">
         <li><input type="file" (change)="loadService.importFile($event)"></li>
-        <li *ngIf="loadService.getLoads().length > 0"><input type="file" (change)="loadService.importPictures(loadService.getLoads(),$event)" multiple></li>
+        <li *ngIf="loadService.getLoads().length > 0"><input type="file"
+                                                             (change)="loadService.importPictures(loadService.getLoads(),$event)"
+                                                             multiple></li>
+        <li><a class="dropdown-button" data-activates="dropdown1">Choose language<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
     </div>
   </nav>
 </div>
-
 <router-outlet></router-outlet>

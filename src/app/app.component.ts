@@ -1,6 +1,6 @@
 import {Component, EventEmitter} from '@angular/core';
 import {LoadService} from "./services/loadService";
-import {TranslateService} from '@ngx-translate/core';
+import {TranslateService} from 'ng2-translate';
 
 
 @Component({

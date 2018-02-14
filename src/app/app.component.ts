@@ -9,16 +9,18 @@ import {TranslateService} from 'ng2-translate';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  chosenLanguage: string ='';
 
   constructor(private loadService: LoadService, private translate: TranslateService) {
     translate.addLangs(['en', 'fr', 'nl']);
     translate.setDefaultLang('en');
     translate.use('en');
+    this.chosenLanguage = 'EN';
   }
 
   changeLang(lang: string) {
     this.translate.use(lang);
-    console.log("language changed to " + lang)
+    this.chosenLanguage = lang.toUpperCase();
   }
 }
 

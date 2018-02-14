@@ -6,13 +6,13 @@
 <div class="navbar-fixed hidden-print">
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">{{"Loads" || translate}}</a>
+      <a class="brand-logo"> <div [innerHTML]="'SPECIAL_OFFERS' | translate"></div></a>
       <ul id="nav-mobile" class="right">
         <li><input type="file" (change)="loadService.importFile($event)"></li>
         <li *ngIf="loadService.getLoads().length > 0"><input type="file"
                                                              (change)="loadService.importPictures(loadService.getLoads(),$event)"
                                                              multiple></li>
-        <li><a class="dropdown-button" data-activates="dropdown1">Choose language<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-button" data-activates="dropdown1">{{this.chosenLanguage}}<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
     </div>
   </nav>

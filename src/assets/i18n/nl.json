@@ -1,11 +1,11 @@
 {
-  "SPECIAL_OFFERS": "Loten",
-  "ARTICLE_CODE": "Artikel Code",
-  "PLANT": "Vestiging",
-  "DESCRIPTION": "Beschrijving",
-  "STOCK": "Stock",
-  "PRICE/THOUSAND": "Prijs per Duizend",
-  "PIECES/PALLET": "Prijs per Pallet",
-  "TONNAGE": "Tonnage",
-  "STOCK_SQUARE_METRES": "Voorraad (m²)"
+  "SPECIAL_OFFERS": "Loten ",
+  "ARTICLE_CODE": "Artikel Code ",
+  "PLANT": "Vestiging ",
+  "DESCRIPTION": "Beschrijving ",
+  "STOCK": "Stock ",
+  "PRICE/THOUSAND": "Prijs per Duizend ",
+  "PIECES/PALLET": "Prijs per Pallet ",
+  "TONNAGE": "Tonnage ",
+  "STOCK_SQUARE_METRES": "Voorraad (m²) "
 }

@@ -6,16 +6,16 @@
   <div class="card-content">
     <div class="columns resize">
       <div>
-        <p><b>Artikel Code </b>{{load.articleCode}}</p>
-        <p><b>Vestiging </b>{{load.department}}</p>
-        <p><b>Beschrijving </b> <span [style.font-size] = "getFontSizeForDescription(load.description)">{{load.description}}</span></p>
-        <p><b>Vrij </b>{{load.free}}</p>
+        <p><b [innerHTML]="'ARTICLE_CODE' | translate"></b>{{load.articleCode}}</p>
+        <p><b [innerHTML]="'PLANT' | translate">Vestiging </b>{{load.department}}</p>
+        <p><b [innerHTML]="'DESCRIPTION' | translate">Beschrijving </b> <span [style.font-size] = "getFontSizeForDescription(load.description)">{{load.description}}</span></p>
+        <p><b [innerHTML]="'STOCK' | translate">Vrij </b>{{load.free}}</p>
       </div>
       <div class="space">
-        <p><b>Prijs Per Duizend </b>{{load.price}}</p>
-        <p><b>Stuks per pallet </b>{{load.piecesPerRack}}</p>
-        <p><b>Tonnage </b>{{load.weight}}</p>
-        <p><b>Vrij m² </b>{{load.freeInCubicMeters}}</p>
+        <p><b [innerHTML]="'PRICE/THOUSAND' | translate"></b>{{load.price}} €</p>
+        <p><b [innerHTML]="'PIECES/PALLET' | translate"></b>{{load.piecesPerRack}}</p>
+        <p><b [innerHTML]="'TONNAGE' | translate">Tonnage </b>{{load.weight}} kg</p>
+        <p><b [innerHTML]="'STOCK_SQUARE_METRES' | translate">Vrij m² </b>{{load.freeInCubicMeters}}</p>
       </div>
     </div>
   </div>
